@@ -1,0 +1,36 @@
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 70px;
+    list-style: none;
+}
+nav li {
+    width: 80px;
+    height: 80px;
+}
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    cursor: pointer;
+}
