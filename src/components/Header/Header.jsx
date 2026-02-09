@@ -32,12 +32,12 @@ const Header = () => {
       </nav>
 
       <div className="carts">
-        {data.map((item,index) => (
+        {data.map((item, index) => (
           <div key={index} className="card">
-            <img 
-              src={item.products[0]?.thumbnail} 
-              alt="product" 
-              className="image" 
+            <img
+              src={item.products[0].thumbnail}
+              alt="product"
+              className="image"
             />
             <h3 className="card_title">Order #{item.id}</h3>
             <p>Items: {item.totalProducts}</p>
