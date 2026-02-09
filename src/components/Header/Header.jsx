@@ -5,9 +5,9 @@ const Header = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/carts')
+    fetch('https://dummyjson.com/recipes')
       .then(res => res.json())
-      .then(json => setData(json.carts));
+      .then(json => setData(json.recipes));
   }, []);
 
   return (
@@ -32,17 +32,13 @@ const Header = () => {
       </nav>
 
       <div className="carts">
-        {data.map((item, index) => (
+        {data.map((item,index) => (
           <div key={index} className="card">
-            <img
-              src={item.products[0].thumbnail}
-              alt="product"
-              className="image"
-            />
-            <h3 className="card_title">Order #{item.id}</h3>
-            <p>Items: {item.totalProducts}</p>
-            <p>Price: ${item.total}</p>
-            <button className="button">Add</button>
+            <img src={item.image} alt={item.name} className="image" />
+            <h3 className="card_title">{item.name}</h3>
+            <p>Rating:  {item.rating}</p>
+            <p>Calories: {item.caloriesPerServing} kcal</p>
+            <button className="button">Add to Cart</button>
           </div>
         ))}
       </div>
