@@ -17,7 +17,7 @@ const Header = () => {
           <h1 className="section_title">Puspa Food</h1>
           <p>Bekasi, South Jakarta • June 22, 2023</p>
         </div>
-        <input type="search" placeholder="Search menu" className="search" />
+        <input type="search" placeholder="🔍 Search menu" className="search" />
       </header>
 
       <nav className="nav">
@@ -36,7 +36,7 @@ const Header = () => {
           <div key={index} className="card">
             <img src={item.image} alt={item.name} className="image" />
             <h3 className="card_title">{item.name}</h3>
-            <p>Rating:  {item.rating}</p>
+            <p>Rating: 2 {item.rating}</p>
             <p>Calories: {item.caloriesPerServing} kcal</p>
             <button className="button">Add to Cart</button>
           </div>

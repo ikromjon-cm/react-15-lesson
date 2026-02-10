@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [open, setOpen] = useState(true);
 
     return (
-        <div className={open ? "sidebar open" : "sidebar"}>
+        <div  className=  {open ? "sidebar open" : "sidebar"}>
             <div className="logo">
                 <button onClick={() => setOpen(!open)}>
                     <LuClover />
